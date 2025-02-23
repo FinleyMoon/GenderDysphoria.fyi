@@ -8,8 +8,7 @@
   <meta name="author" content="{{site.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:site_name" content="{{{lang 'SITE_TITLE'}}}">
-  <meta name="twitter:site" content="{{{lang 'SITE_TITLE'}}}">
-  <meta name="twitter:creator" content="{{site.creator}}">
+  <meta name="fediverse:creator" content="{{site.creator}}" />
   {{block "meta"}}
   <title>{{page.title}}</title>
 
@@ -82,23 +81,12 @@
       {{block "body"}}
     </div>
     <footer>
-      {{import "~/patreon"}}
-      <p class="copyright">{{{lang 'FOOTER_COPYRIGHT'}}}<span class="cc-by-nc-sa">{{icon 'symbols/cc'}}{{icon 'symbols/cc-by'}}{{icon 'symbols/cc-nc'}}{{icon 'symbols/cc-sa'}}</span><br>&copy; {{date "now" "yyyy"}} <a href="https://curvyandtrans.com">Jocelyn Badgley</a> {{lang 'FOOTER_COPYRIGHT2'}}</p>
+      <p class="copyright">{{{lang 'FOOTER_COPYRIGHT'}}}<span class="cc-by-nc-sa">{{icon 'symbols/cc'}}{{icon 'symbols/cc-by'}}{{icon 'symbols/cc-nc'}}{{icon 'symbols/cc-sa'}}</span><br>&copy; {{date "now" "yyyy"}} Twipped Media {{lang 'FOOTER_COPYRIGHT2'}}</p>
       <p class="foot-nav"><a href="/privacy.html">{{lang 'Privacy Policy'}}</a></p>
-
     </footer>
   </div>
 
   {{block "postscripts"}}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3C6NFB2MK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag () { window.dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-N3C6NFB2MK');
-  </script>
   <noscript><img src="{{#prod}}//t.{{page.domain}}{{/prod}}/i?stage=noscript" style="display: none"></noscript>
 </body>
 </html>
